@@ -6,6 +6,8 @@ public class Destroy : MonoBehaviour
 {
    
     public int ObjLife = 1;
+
+    public Rigidbody IncreasePlatPrefab;
     void Start()
     {
         
@@ -14,9 +16,28 @@ public class Destroy : MonoBehaviour
     {
         
     }
+   
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("ball_t") )
+        {
+            if (ObjLife == 1)
+            {
+                Creat(gameObject.transform);
+                Destroy(gameObject);
+                
+            }
+            else
+            {
+                ObjLife--;
+                Change_color();
+            }
+
+        }
+    }
     void Change_color()
     {
-       
+
         switch (ObjLife)
         {
             case 1:
@@ -36,18 +57,15 @@ public class Destroy : MonoBehaviour
                 break;
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("ball_t") )
-        {
-            if (ObjLife == 1)
-            { Destroy(gameObject); }
-            else
-            {
-                ObjLife--;
-                Change_color();
-            }
 
-        }
+
+    void Creat(Transform xyz)
+    {
+        if (IncreasePlatPrefab != null)
+        {
+            Rigidbody IncreasePlat;
+            IncreasePlat = Instantiate(IncreasePlatPrefab, xyz.position, xyz.rotation) as Rigidbody;
+        }      
+
     }
 }

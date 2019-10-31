@@ -40,8 +40,11 @@ public class move_ball : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        
+
         if (other.gameObject.CompareTag("wall_t"))
-        { ChangeDirection_x *= -1;
+        {
+            ChangeDirection_x *= -1;
          
         }
         if (other.gameObject.CompareTag("top_t"))
@@ -56,8 +59,18 @@ public class move_ball : MonoBehaviour
         }
         if (other.gameObject.CompareTag("cube_t"))
         {
-            ChangeDirection_y *= -1;
-            ChangeDirection_x *= -1;
+            float dy, dx;
+            dy =  (other.transform.localScale.y + transform.localScale.y) / 2;
+            dx =  (other.transform.localScale.x + transform.localScale.x) / 2;
+
+            if (transform.position.y <= other.transform.position.y+dy || transform.position.y <= other.transform.position.y - dy)
+            { ChangeDirection_y *= -1; }
+            if (transform.position.x <= other.transform.position.x+ dx || transform.position.x >= other.transform.position.x - dx)
+            { ChangeDirection_x *= -1; }
+
+
+            
+            
         }
         if (other.gameObject.CompareTag("floor_t"))
         {

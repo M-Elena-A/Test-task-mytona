@@ -62,7 +62,10 @@
   <ItemGroup>
     <Compile Include="Assets\Code\Destroy.cs" />
     <Compile Include="Assets\Code\Destroy_ball.cs" />
+    <Compile Include="Assets\Code\Destroy_bonus.cs" />
+    <Compile Include="Assets\Code\increase_platform.cs" />
     <Compile Include="Assets\Code\move_ball.cs" />
+    <Compile Include="Assets\Code\move_Bonus.cs" />
     <Compile Include="Assets\Code\move_platform.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/Елена_HP/Git/Test-task-mytona/Test-task-mytona/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
