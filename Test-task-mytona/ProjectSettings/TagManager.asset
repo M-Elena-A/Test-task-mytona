@@ -11,6 +11,9 @@ TagManager:
   - cube_t
   - top_t
   - increaseP_t
+  - extra_b
+  - speed_up
+  - speed_down
   layers:
   - Default
   - TransparentFX

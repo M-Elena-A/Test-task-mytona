@@ -60,10 +60,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Code\Bonus_platform.cs" />
+    <Compile Include="Assets\Code\Button.cs" />
     <Compile Include="Assets\Code\Destroy.cs" />
     <Compile Include="Assets\Code\Destroy_ball.cs" />
     <Compile Include="Assets\Code\Destroy_bonus.cs" />
-    <Compile Include="Assets\Code\increase_platform.cs" />
     <Compile Include="Assets\Code\move_ball.cs" />
     <Compile Include="Assets\Code\move_Bonus.cs" />
     <Compile Include="Assets\Code\move_platform.cs" />

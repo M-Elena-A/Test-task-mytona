@@ -20,5 +20,6 @@ public class move_platform : MonoBehaviour
             transform.position += Vector3.right * Time.deltaTime * speed;
         }
     }
+
     
 }

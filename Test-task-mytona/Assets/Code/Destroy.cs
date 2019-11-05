@@ -5,18 +5,10 @@ using UnityEngine;
 public class Destroy : MonoBehaviour
 {
    
-    public int ObjLife = 1;
+    public int ObjLife = 3;
 
     public Rigidbody IncreasePlatPrefab;
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
-   
+     
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("ball_t") )
@@ -63,8 +55,8 @@ public class Destroy : MonoBehaviour
     {
         if (IncreasePlatPrefab != null)
         {
-            Rigidbody IncreasePlat;
-            IncreasePlat = Instantiate(IncreasePlatPrefab, xyz.position, xyz.rotation) as Rigidbody;
+            Rigidbody Bonus;
+            Bonus = Instantiate(IncreasePlatPrefab, xyz.position, xyz.rotation) as Rigidbody;
         }      
 
     }
